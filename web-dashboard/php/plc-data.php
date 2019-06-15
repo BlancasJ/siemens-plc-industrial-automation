@@ -15,11 +15,11 @@
 $servername = "localhost";
 
 // REPLACE with your Database name
-$dbname = "id10006836_plc";
+$dbname = "YOUR_DATABASE_NAME";
 // REPLACE with Database user
-$username = "id10006836_upyplc";
+$username = "YOUR_DATABASE_USER";
 // REPLACE with Database user password
-$password = "DB_PASSWORD";
+$password = "YOUR_DATABASE_PASSWORD";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
