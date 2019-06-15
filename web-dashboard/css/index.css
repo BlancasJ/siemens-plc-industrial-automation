@@ -1,0 +1,53 @@
+body{
+  background-color: lightgrey;
+}
+
+.divheader{
+  text-align: center;
+  background-color:grey;
+  color:white;
+  padding:20px;
+}
+
+.MainMenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.MainMenu li {
+  float: left;
+}
+
+.MainMenu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.MainMenu li a:hover {
+  background-color: #111111;
+}
+
+.divbody{
+  float: left;
+  text-align: left;
+  color:black;
+  padding:20px;
+}
+.divbody img{
+  float: right;
+  margin: 20px 20px;
+  width: 460px;
+  weight: 460px;
+}
+.divbody p{
+  margin: 10;
+  padding: 10;
+  font-family: fantasy;
+  font-size: 23px;
+}

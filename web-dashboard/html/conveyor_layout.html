@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lan="en-US">
+
+  <head>
+    <!-- Genral Info -->
+    <title>PLC Monitor Process: Conveyor Belt Layout</title>
+    <meta charset="utf-8">
+    <meta name="description" content="PLC Monitor Process">
+    <meta name="keywords" content="PLC, Monitor Process, Real Time, Conveyor Belt">
+    <!-- CSS files -->
+    <link type="text/css" rel="stylesheet" href="../css/conveyor_layout.css">
+    <link type="text/css" rel="stylesheet" href="../css/index.css">
+    <!-- JS files -->
+     <script type="text/javascript" src="../js/logic.js"></script>
+  </head>
+
+  <body>
+    <div class="divheader">
+        <h1>PLC Monitor Process: Conveyor Bel Layout</h1>
+    </div>
+    <hr>
+    <div class="MainMenu">
+      <ul>
+        <li><a href="#Menu">Menu</a></li>
+        <li><a href="index.html" target="_self">Home Page</a></li>
+        <li><a href="conveyor_layout.html" target="_self">Conveyor Layout</a></li>
+        <li><a href="conveyor_table.html" target="_self">Conveyor Table</a></li>
+      </ul>
+    </div>
+
+    <!-- Here we have the sensors -->
+
+    <div class='squares' id='sensor1'></div>
+    <div class='squares' id='sensor2'></div>
+    <div class='squares' id='sensor3'></div>
+    <div class='squares' id='sensor4'></div>
+    <div class='squares' id='sensor5'></div>
+
+
+
+    <!--Here the belt is stopped-->
+
+    <div class="machine" title="Conveyor Belt">
+      <div class="packageContinue" id="stopPack"></div>
+      <div class="belt">
+        <div class="gear StopGears" id="stopGear"></div>
+        <div class="gear right StopGears" id="stopGearR"></div>
+        <div class="TheseAreTheBreaksStop" id="breakStop"></div>
+        <div class="TheseAreTheBreaks_AgainStop" id="breakStopA"></div>
+      </div>
+    </div>
+
+
+    <!--Here the belt runs normally-->
+
+
+    <!--
+    <div class="machine" title="Conveyor Belt">
+      <div class="package"></div>
+      <div class="belt">
+        <div class="gear"></div>
+        <div class="gear right"></div>
+        <div class="TheseAreTheBreaks"></div>
+        <div class="TheseAreTheBreaks_Again"></div>
+      </div>
+    </div>
+    -->
+
+    <div title="Traffic Light">
+      <ul class='semaforo' id="traffic1">
+      <li></li>
+      <li></li>
+      <li></li>
+      </ul>
+    </div>
+    <!--
+    <div>
+      <button onclick="myFunction0()">red</button>
+      <br>
+      <button onclick="myFunction1()">orange</button>
+      <br>
+      <button onclick="myFunction2()">green</button>
+      <br>
+      <button onclick="on()">on</button>
+      <br>
+      <button onclick="off()">off</button>
+    </div>
+  -->
+    <div class="whsend" id='whsend1'>
+      <form action="../php/data2send.php" method="post">
+        Start Conveyor: <input type="text" name="startcon"><br>
+        Stop Conveyor: <input type="text" name="stopcon"><br>
+        Start Warehouse: <input type="text" name="startwh"><br>
+        Stop Warehouse: <input type="text" name="stopwh"><br>
+        Auto Mode Warehouse: <input type="text" name="autowh"><br>
+        X Position: <input type="text" name="xpos"><br>
+        Y Position: <input type="text" name="ypos"><br>
+        <input class="boton_1 submitb" type="submit">
+      </form>
+    </div>
+
+
+  </body>
+
+</html>

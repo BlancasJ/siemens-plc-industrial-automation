@@ -1,0 +1,31 @@
+table{
+  float: left;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 300px;
+  margin: 50px 50px;
+}
+
+td, th{
+  border: 3px solid #bbbbbb;
+  text-align: left;
+  padding: 8px;
+}
+th{
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(even){
+  background-color: #eee;
+}
+
+tr:nth-child(odd){
+  background-color: #fff;
+}
+
+caption{
+  text-align: center;
+  color: green;
+  font-size: 150%;
+}

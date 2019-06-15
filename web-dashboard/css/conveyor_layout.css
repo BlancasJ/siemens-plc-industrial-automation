@@ -1,0 +1,393 @@
+.machine{
+  margin:50px 300px;
+  width:640px;
+}
+.belt{
+  width:640px;
+  height:3px;
+  background:black;
+  box-shadow:0px 29px 0 black;
+  /* box-shadow: 105px 0px 0 black, 210px 0px 0 black, 315px 0px 0 black, 0px 29px 0 black, 105px 29px 0 black, 210px 29px 0 black, 315px 29px 0 black;
+  */
+  position:relative;
+  margin:0 auto;
+}
+
+.belt:before{
+  content:'';
+  width: 70px;
+  height: 42px;
+  border: 3px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: -8px;
+  left: -9px;
+}
+.belt:after{
+  content:'';
+  width: 70px;
+  height: 42px;
+  border: 3px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: -8px;
+  right: -9px;
+}
+
+.TheseAreTheBreaks{
+  width: 10px;
+  height: 10px;
+  background: lightgrey;
+  border-radius: 50%;
+  position: relative;
+  top: -5px;
+  left: 0;
+  z-index: 10;
+  box-shadow: -80px 0px 0 lightgrey, -160px 0px 0 lightgrey, -240px 0px 0 lightgrey, -320px 0px 0 lightgrey, -400px 0px 0 lightgrey, -480px 0px 0 lightgrey, -560px 0px 0 lightgrey, 80px 0px 0 lightgrey, 160px 0px 0 lightgrey, 240px 0px 0 lightgrey, 320px 0px 0 lightgrey, 400px 0px 0 lightgrey, 480px 0px 0 lightgrey, 560px 0px 0 lightgrey, 640px 0px 0 lightgrey;
+  animation: roll 21.5s linear infinite;
+  z-index:10;
+}
+.TheseAreTheBreaks_Again{
+  width: 10px;
+  height: 10px;
+  background: lightgrey;
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  right: 0;
+  z-index: 11;
+  box-shadow: 80px 0px 0 lightgrey, 160px 0px 0 lightgrey, 240px 0px 0 lightgrey, 320px 0px 0 lightgrey, 400px 0px 0 lightgrey, 480px 0px 0 lightgrey, 560px 0px 0 lightgrey, 640px 0px 0 lightgrey, 720px 0px 0 lightgrey, 800px 0px 0 lightgrey, 880px 0px 0 lightgrey, 960px 0px 0 lightgrey, 1040px 0px 0 lightgrey, 1120px 0px 0 lightgrey, 1200px 0px 0 lightgrey, 1280px 0px 0 lightgrey, 1360px 0px 0 lightgrey;
+  animation: rollback 21.5s linear infinite;
+  z-index:11;
+}
+
+.TheseAreTheBreaksStop{
+  width: 10px;
+  height: 10px;
+  background: lightgrey;
+  border-radius: 50%;
+  position: relative;
+  top: -5px;
+  left: 0;
+  z-index: 10;
+  box-shadow: -80px 0px 0 lightgrey, -160px 0px 0 lightgrey, -240px 0px 0 lightgrey, -320px 0px 0 lightgrey, -400px 0px 0 lightgrey, -480px 0px 0 lightgrey, -560px 0px 0 lightgrey, 80px 0px 0 lightgrey, 160px 0px 0 lightgrey, 240px 0px 0 lightgrey, 320px 0px 0 lightgrey, 400px 0px 0 lightgrey, 480px 0px 0 lightgrey, 560px 0px 0 lightgrey, 640px 0px 0 lightgrey;
+  animation: rollStop 21.5s linear infinite;
+  z-index:10;
+}
+.TheseAreTheBreaks_AgainStop{
+  width: 10px;
+  height: 10px;
+  background: lightgrey;
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  right: 0;
+  z-index: 11;
+  box-shadow: 80px 0px 0 lightgrey, 160px 0px 0 lightgrey, 240px 0px 0 lightgrey, 320px 0px 0 lightgrey, 400px 0px 0 lightgrey, 480px 0px 0 lightgrey, 560px 0px 0 lightgrey, 640px 0px 0 lightgrey, 720px 0px 0 lightgrey, 800px 0px 0 lightgrey, 880px 0px 0 lightgrey, 960px 0px 0 lightgrey, 1040px 0px 0 lightgrey, 1120px 0px 0 lightgrey, 1200px 0px 0 lightgrey, 1280px 0px 0 lightgrey, 1360px 0px 0 lightgrey;
+  animation: rollbackStop 21.5s linear infinite;
+  z-index:11;
+}
+
+.package{
+  display:block;
+  width:20px;
+  height:20px;
+  background:black;
+  z-index:40;
+  position:relative;
+  animation: rollandfall 21.5s linear infinite;
+  transform-origin:100% 100%;
+}
+.packageContinue{
+  display:block;
+  width:20px;
+  height:20px;
+  background:black;
+  z-index:40;
+  position:relative;
+  animation: rollandfallpause 5.5s linear infinite;
+  transform-origin:100% 100%;
+}
+.packageStop{
+  display:block;
+  width:20px;
+  height:20px;
+  background:black;
+  z-index:40;
+  position:relative;
+  animation: rollandfallStop 21.5s linear infinite;
+  transform-origin:100% 100%;
+}
+
+.packagePause{
+  display:block;
+  width:20px;
+  height:20px;
+  background:black;
+  z-index:40;
+  position:relative;
+  left:460px; top:0px;
+  transform-origin:100% 100%;
+}
+
+.gear{
+  float:left;
+  display:inline-block;
+  border:6px solid ;
+	border-radius:50%;
+  width:10px;
+  height:10px;
+  position:relative;
+  top: 5px;
+  animation: load 5s linear infinite;
+  z-index:20;
+}
+.gearStop{
+  float:left;
+  display:inline-block;
+  border:6px solid ;
+	border-radius:50%;
+  width:10px;
+  height:10px;
+  position:relative;
+  top: 5px;
+  animation: loadStop 21.5s linear infinite;
+  z-index:20;
+}
+
+.gear:before{
+	background:black;
+  width: 5px;
+  height: 5px;
+  position:absolute;
+  content:'';
+  top:-6px;
+  left:10px;
+  box-shadow: 12px 10px 0 black, 0px 23px 0 black, -11px 10px 0 black;
+  -webkit-transform: rotate(45deg);
+}
+.gear:after{
+  background: black;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  content: '';
+  top: -9px;
+  left: 2px;
+  box-shadow: 12px 10px 0 black, 0px 23px 0 black, -11px 10px 0 black;
+}
+.right{
+ float:right;}
+@keyframes load {
+  100% { transform: rotate(360deg); }
+}
+@keyframes loadStop {
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes roll {
+  100% { left:100%; }
+}
+@keyframes rollStop {
+  100% { left:0%; }
+}
+
+@keyframes rollback {
+  100% { right:100%; }
+}
+@keyframes rollbackStop {
+  100% { right:0%; }
+}
+
+@keyframes rollandfall {
+  0% { left:0px; top:0px; transform:rotate(0deg);}
+  100% { left:460px; top:0; transform:rotate(0deg);}
+
+}
+@keyframes rollandfallStop {
+  0% { left:0px; top:0px; transform:rotate(0deg);}
+  100% { left:0px; top:0; transform:rotate(0deg);}
+}
+@keyframes rollandfallpause {
+  0% { left:460px; top:0px; transform:rotate(0deg);}
+  100% { left:600px; top:0; transform:rotate(0deg);}
+}
+
+
+
+
+/* Semáforo realista CSS */
+
+ul.semaforo {
+float:right;
+position: relative;
+width: 100px;
+margin: 20px 50px;
+padding: 15px;
+list-style-type: none;
+border: 6px double grey;
+background: black;
+background: linear-gradient( -90deg, #45484d 0%, #000000 100%);
+border-radius: 20%;
+box-shadow: 0px 0px 0 20px rgba(0,0,0,.8);
+}
+ul.semaforo li {
+position:relative;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background: lightgrey;
+margin: 10px 0;
+background: linear-gradient(top, rgba(187,187,187,1) 0%,rgba(119,119,119,1) 99%);
+box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4),
+inset -2px -1px 40px rgba(0,0,0,0.4),
+0 0 1px #000;
+}
+ul.semaforo li:after {
+content: "";
+width: 60px;
+height: 30px;
+position: absolute;
+left: 20px;
+top: 10px;
+box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+border-radius: 30px / 15px;
+}
+.rojo li:nth-of-type(1) {
+background: #cc0000;
+background: radial-gradient(center, ellipse cover, #ff0000 1%, #cc0000 100%);
+}
+.naranja li:nth-of-type(2) {
+background: #FF9326;
+}
+.verde li:nth-of-type(3) {
+background: #00ff00;
+}
+
+.boton_1{
+  text-decoration: none;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: helvetica;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.boton_1:hover{
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+#startb{
+  color: #006505;
+  background-color: #82b085;
+  border-radius: 15px;
+  border: 3px double #006505;
+  position: absolute;
+  top: 500px;
+  left: 450px;
+}
+
+#stopb{
+  color: red;
+  background-color: tomato;
+  border-radius: 15px;
+  border: 3px double red;
+  position: absolute;
+  top: 500px;
+  left: 700px;
+}
+
+.submitb{
+  color: purple;
+  background-color: violet;
+  border-radius: 15px;
+  border: 3px double purple;
+}
+
+.whsend{
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: helvetica;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  position: absolute;
+}
+#whsend1{
+  top: 350px;
+  left: 500px;
+}
+#whsend2{
+  top: 475px;
+  left: 500px;
+}
+#whsend3{
+  top: 650px;
+  left: 500px;
+}
+
+
+/* Stop ID for the Gears*/
+.StopGears{
+  animation: loadStop 5s linear infinite;
+}
+
+/* Squares*/
+#sensor1{
+  position:absolute;
+  top: 235px;
+  left: 210px;
+}
+#sensor2{
+  position:absolute;
+  top: 235px;
+  left: 250px;
+}
+#sensor3{
+  position:absolute;
+  top: 235px;
+  left: 280px;
+}
+#sensor4{
+  position:absolute;
+  top: 235px;
+  left: 670px;
+}
+#sensor5{
+  position:absolute;
+  top: 235px;
+  left: 830px;
+}
+.squares{
+
+  width:10px;
+  height:10px;
+
+  position:absolute;
+  top: 500px;
+  left: 0px;
+  transform-origin:100% 100%;
+  box-shadow: 100px 0px 0 gray;
+
+}
+.squareGreen{
+  width:10px;
+  height:10px;
+  position:absolute;
+  top: 550;
+  left: 0px;
+  transform-origin:100% 100%;
+  box-shadow: 100px 0px 0 green;
+
+
+}
